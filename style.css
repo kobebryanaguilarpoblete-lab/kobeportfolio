@@ -1,0 +1,116 @@
+
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, nav, main, footer {
+      padding: 1rem;
+    }
+header h1 {
+  display: flex;
+  gap: 2px;
+}
+
+header h1 span {
+  display: inline-block;
+  animation-name: wave;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes wave {
+  0%, 60%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-40px);
+  }
+}
+
+/* Stagger animation delays for each letter */
+header h1 span:nth-child(1) { animation-delay: 0s; }
+header h1 span:nth-child(2) { animation-delay: 0.1s; }
+header h1 span:nth-child(3) { animation-delay: 0.2s; }
+header h1 span:nth-child(4) { animation-delay: 0.3s; }
+header h1 span:nth-child(5) { animation-delay: 0.4s; }
+header h1 span:nth-child(6) { animation-delay: 0.5s; }
+header h1 span:nth-child(7) { animation-delay: 0.6s; }
+header h1 span:nth-child(8) { animation-delay: 0.7s; }
+header h1 span:nth-child(9) { animation-delay: 0.8s; }
+header h1 span:nth-child(10) { animation-delay: 0.9s; }
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* para magkalayo yung heading at image */
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ccc;
+}
+
+header img {
+  height: 80px;            /* height na 60px */
+  width: 70px;             /* width para square and perfect circle */
+  border-radius: 50%;      /* bilog */
+  object-fit: cover;       /* para hindi ma-distort yung image */
+  border: 2px solid black; /* optional border */
+}
+
+
+/* Center the navigation menu */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;      /* auto margin for centering */
+  display: flex;
+  gap: 1rem;
+  justify-content: center;  /* center items horizontally */
+  max-width: 600px;         /* optional: limit nav width */
+}
+
+/* Style for links */
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Hover effect */
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #007BFF;  /* blue background */
+  color: white;               /* white text */
+  cursor: pointer;
+}
+
+
+    main {
+      padding: 2rem 1rem;
+    }
+
+    footer {
+      background-color: #f8f9fa;
+      text-align: center;
+      border-top: 1px solid #ccc;
+     margin-bottom: 0%;
+    }
+.content-wrapper {
+  display: flex;
+  align-items: flex-start; /* Align text and image top */
+  gap: 20px; /* Space between image and text */
+}
+
+.content-wrapper img {
+  
+  border-radius: 10px; /* optional: rounded corners */
+}
+
+.content-wrapper p {
+  max-width: 600px; /* control text width */
+}
